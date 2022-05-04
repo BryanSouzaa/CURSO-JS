@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 011</title>
+    <style>body{
+background-color: rgb(13, 90, 3);
+font: oblique 15pt arial;
+    }
+    h1{
+        color: white;
+    }
+    </style>
+</head>
+<body>
+   <h1>SISTEMA DE NACIONALIDADE</h1>
+   Digite o nome do seu país: <input type="text" name="brl" id="brl">
+<input type="button" value="Verificar" onclick="verificar()">
+<div id="res">
+
+</div>
+   
+<script>
+function verificar(){
+var br = window.document.getElementById('brl')
+var res = window.document.getElementById('res')
+var n = (br.value)
+res.innerHTML = (`<p>Voce vive em ${n}<p>`)
+    if (n == "brasil"){
+        res.innerHTML += '<p>Voce é BRASILEIRO!<p>'
+    }else {
+        res.innerHTML += '<p>Voce é estrageiro!<p>'}
+}
+
+</script>
+</body>
+</html>

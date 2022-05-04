@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+      div#a{
+          font: normal 16pt arial;
+          background-color: forestgreen;
+          color: rgb(255, 255, 255);
+          width: 200px;
+          height: 200px;
+          line-height: 200px;
+          text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <div id="a">
+        interaja...
+    </div>
+
+    <script>
+var a1 = window.document.getElementById('a')
+
+a1.addEventListener('click', clicar)
+a1.addEventListener('mouseenter', entrar)
+a1.addEventListener('mouseout', saiu)
+
+function clicar(){
+a1.innerText = 'Clicou!'
+a1.style.background = 'black'
+}
+function entrar(){
+a1.innerText = 'Entrou!'
+}
+function saiu(){ 
+a1.innerText = 'Saiu!'
+a1.style.background = 'forestgreen'
+}
+
+    </script>
+</body>
+</html>
